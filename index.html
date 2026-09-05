@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Assistente Qwen — PT/ZH · código · chat apps</title>
+<title>Assistente Qwen (host free) — PT/ZH · código · chat apps</title>
 <style>
 body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;padding:0 1rem;line-height:1.45}
 .sku{border:1px solid #ddd;border-radius:12px;padding:1rem;margin:1rem 0}
@@ -29,302 +29,28 @@ code{display:block;font-size:.7rem;word-break:break-all;background:#f5f5f5;paddi
 </div>
 
 <div class="sku">
-<div class="price">Ebook + mini-curso PT/ZH (PDF)</div>
-<p>Copy, tradução ZH↔PT e prompts — amostra gratuita na Pages; pacotes pagos via PIX abaixo.</p>
-<p><a href="ebook-qwen-pt-zh-minicurso.pdf">Baixar PDF</a> · também em <code>/workspace/revenue-missions/qwen/entregaveis/ebook-qwen-pt-zh-minicurso.pdf</code></p>
+<div class="price">PDF vol.1 — Minicurso PT/ZH</div>
+<p><a href="ebook-qwen-pt-zh-minicurso.pdf">Baixar PDF</a></p>
 </div>
 
-<div class="sku" style="background:#f0fdf4;border-color:#86efac">
-<div class="price">Tip PIX (rápido)</div>
+<p>Copy, tradução ZH↔PT e prompts — amostra gratuita; pacotes pagos via PIX abaixo.</p>
 <p>Escaneie o QR do valor certo · ou cole o EMV. Depois e-mail <strong>z99003303@gmail.com</strong> com valor + pacote. Entrega no dia útil.</p>
-<p class="muted">Mapa: R$10=<code>qr_4</code> · R$20=<code>pix-r20</code> · R$50=<code>_2</code> · R$100=<code>_0</code></p>
-<p class="muted">Amostra PT/ZH: <a href="https://github.com/Ziuluiziul/qwen-assistente-pix/blob/main/entregavel-pack-pt-zh.md">entregavel-pack-pt-zh.md</a> (espelho no repo)</p>
-</div>
 
 <p class="warn">PIX por valor (EMV 54): R$10=<code>qr_4</code> · R$20=<code>pix-r20</code> · R$50=<code>_2</code> · R$100=<code>_0</code>/<code>_3</code> · R$200=<code>_1</code>. Fonte = payload EMV (CRC).</p>
 
 <div class="sku"><div class="price">R$ 10 — Microcopy</div>
-<img src="pix_r10.png" alt="PIX ROUT=/workspace/pix-clean/out
-DIR=/workspace/revenue-missions/qwen/vendas/pages
-GISTDIR=/workspace/revenue-missions/qwen/vendas/public/gist-pix
-R20TXT=/workspace/revenue-missions/cumulunimbus/pix/pix_r20.txt
-R20PNG=/workspace/revenue-missions/cumulunimbus/pix/pix_r20.png
-mkdir -p "$GISTDIR"
-
-# Correct pairs
-cp "$OUT/qr_4.png" "$DIR/pix_r10.png"
-cp "$OUT/pix_copia_cola_4.txt" "$DIR/pix_r10.txt"
-cp "$R20PNG" "$DIR/pix_r20.png"
-cp "$R20TXT" "$DIR/pix_r20.txt"
-cp "$OUT/qr_2.png" "$DIR/pix_r50.png"
-cp "$OUT/pix_copia_cola_2.txt" "$DIR/pix_r50.txt"
-cp "$OUT/qr_0.png" "$DIR/pix_r100.png"
-cp "$OUT/pix_copia_cola_0.txt" "$DIR/pix_r100.txt"
-
-P10=$(tr -d '\n' <"$DIR/pix_r10.txt")
-P20=$(tr -d '\n' <"$DIR/pix_r20.txt")
-P50=$(tr -d '\n' <"$DIR/pix_r50.txt")
-P100=$(tr -d '\n' <"$DIR/pix_r100.txt")
-
-cat > "$DIR/index.html" << EOF
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Assistente Qwen — PT/ZH · código · chat apps</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;padding:0 1rem;line-height:1.45}
-.sku{border:1px solid #ddd;border-radius:12px;padding:1rem;margin:1rem 0}
-.price{font-weight:700;font-size:1.15rem}
-img{width:160px;height:160px}
-code{display:block;font-size:.7rem;word-break:break-all;background:#f5f5f5;padding:.6rem;border-radius:8px;margin-top:.5rem}
-.muted{color:#666;font-size:.9rem}
-.warn{background:#e7f5ff;padding:.75rem;border-radius:8px}
-</style>
-</head>
-<body>
-<h1>Assistente Qwen</h1>
-<p>Copy <strong>PT/ZH</strong>, revisão de código e prompt packs. Stack: chat.qwen.ai free.</p>
-<p class="warn">PIX por valor (EMV 54): R\$10=<code>qr_4</code> · R\$20=<code>pix-r20</code> · R\$50=<code>_2</code> · R\$100=<code>_0</code>/<code>_3</code> · R\$200=<code>_1</code>. Fonte = payload EMV (CRC).</p>
-
-<div class="sku"><div class="price">R\$ 10 — Microcopy</div>
-<img src="pix_r10.png" alt="PIX R$10"/><code>${P10}</code></div>
-<div class="sku"><div class="price">R\$ 20 — Copy curto PT ou ZH</div>
-<img src="pix_r20.png" alt="PIX R$20"/><code>${P20}</code></div>
-<div class="sku"><div class="price">R\$ 50 — Copy + revisão / ZH↔PT</div>
-<img src="pix_r50.png" alt="PIX R$50"/><code>${P50}</code></div>
-<div class="sku"><div class="price">R\$ 100 — Prompt pack / copy maior</div>
-<img src="pix_r100.png" alt="PIX R$100"/><code>${P100}</code></div>
-
-<p class="muted">Recebedor LUIZ · z99003303@gmail.com ·
-Hub <a href="https://ziuluiziul.github.io/round1-cumulunimbus/">Cumulunimbus</a> ·
-Space <a href="https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50">HF PIX R\$50</a> ·
-Brief <a href="https://gist.github.com/Ziuluiziul/0deb075aedb06ade0892e6f848e80f69">Perplexity R\$50</a></p>
-</body>
-</html>
-EOF
-
-# gist assets
-cp "$DIR/pix_r10.png" "$GISTDIR/pix_r10_qr.png"; cp "$DIR/pix_r10.txt" "$GISTDIR/pix_r10_copia_cola.txt"
-cp "$DIR/pix_r20.png" "$GISTDIR/pix_r20_qr.png"; cp "$DIR/pix_r20.txt" "$GISTDIR/pix_r20_copia_cola.txt"
-cp "$DIR/pix_r50.png" "$GISTDIR/pix_r50_qr.png"; cp "$DIR/pix_r50.txt" "$GISTDIR/pix_r50_copia_cola.txt"
-cp "$DIR/pix_r100.png" "$GISTDIR/pix_r100_qr.png"; cp "$DIR/pix_r100.txt" "$GISTDIR/pix_r100_copia_cola.txt"
-
-cat > "$GISTDIR/anuncio-qwen-pt-zh.md" << EOF
-# Assistente Qwen — PT/ZH · código · chat apps
-
-## PIX (mapa corrigido 2026-09-05)
-| Valor | Arquivo |
-|-------|---------|
-| R\$10 | \`qr_4\` / \`pix_copia_cola_4\` |
-| R\$20 | \`pix-r20\` (fora do índice 0..5) |
-| R\$50 | \`_2\` |
-| R\$100 | \`_0\` ou \`_3\` |
-| R\$200 | \`_1\` |
-
-### R\$ 10
-![qr](pix_r10_qr.png)
-\`\`\`
-${P10}
-\`\`\`
-### R\$ 20
-![qr](pix_r20_qr.png)
-\`\`\`
-${P20}
-\`\`\`
-### R\$ 50
-![qr](pix_r50_qr.png)
-\`\`\`
-${P50}
-\`\`\`
-### R\$ 100
-![qr](pix_r100_qr.png)
-\`\`\`
-${P100}
-\`\`\`
-
-Após PIX: z99003303@gmail.com
-Pages: https://ziuluiziul.github.io/qwen-assistente-pix/
-HF: https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50
-EOF
-
-# OFERTA
-cat > /workspace/revenue-missions/qwen/OFERTA.md << 'EOF'
-# OFERTA — Qwen (mapa PIX corrigido)
-
-| SKU | Valor | Fonte EMV |
-|-----|-------|-----------|
-| Microcopy | R$10 | `qr_4` / `pix_copia_cola_4` |
-| Copy curto | R$20 | `pix-r20` |
-| Copy+revisão | R$50 | `_2` |
-| Prompt pack | R$100 | `_0` ou `_3` |
-
-`_1` = R$200 (não R$10). Sem cold-DM.
-Pages: https://ziuluiziul.github.io/qwen-assistente-pix/
-Gist: https://gist.github.com/Ziuluiziul/56b364e3d982216edcf87c9d07084636
-EOF
-
-cd "$DIR"
-git config user.email "z99003303@gmail.com"
-git config user.name "Ziuluiziul"
-git add -A && git commit -m "PIX map fix: R\$10=qr_4 R\$20=pix-r20 R\$50=_2 R\$100=_0 R\$200=_1" && git push
-
-TMP=$(mktemp -d)
-gh gist clone 56b364e3d982216edcf87c9d07084636 "$TMP/g"
-cd "$TMP/g"
-git config user.email "z99003303@gmail.com"
-git config user.name "Ziuluiziul"
-cp "$GISTDIR"/* .
-git add -A && git status
-git commit -m "PIX map fix: R\$10=qr_4 R\$20=pix-r20 R\$50=_2 R\$100=_0" && git push
-echo DONE
-0"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540510.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62090505micro63041306</code></div>
+<img src="pix_r10.png" alt="PIX R$10"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540510.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62090505micro63041306</code></div>
 <div class="sku"><div class="price">R$ 20 — Copy curto PT ou ZH</div>
-<img src="pix_r20.png" alt="PIX R0"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540520.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62100506padrao63043835</code></div>
+<img src="pix_r20.png" alt="PIX R$20"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540520.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62100506padrao63043835</code></div>
 <div class="sku"><div class="price">R$ 50 — Copy + revisão / ZH↔PT</div>
-<img src="pix_r50.png" alt="PIX R0"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540550.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62080504Pack63044E58</code></div>
+<img src="pix_r50.png" alt="PIX R$50"/><code>00020126330014br.gov.bcb.pix011108030362994520400005303986540550.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62080504Pack63044E58</code></div>
 <div class="sku"><div class="price">R$ 100 — Prompt pack / copy maior</div>
-<img src="pix_r100.png" alt="PIX ROUT=/workspace/pix-clean/out
-DIR=/workspace/revenue-missions/qwen/vendas/pages
-GISTDIR=/workspace/revenue-missions/qwen/vendas/public/gist-pix
-R20TXT=/workspace/revenue-missions/cumulunimbus/pix/pix_r20.txt
-R20PNG=/workspace/revenue-missions/cumulunimbus/pix/pix_r20.png
-mkdir -p "$GISTDIR"
-
-# Correct pairs
-cp "$OUT/qr_4.png" "$DIR/pix_r10.png"
-cp "$OUT/pix_copia_cola_4.txt" "$DIR/pix_r10.txt"
-cp "$R20PNG" "$DIR/pix_r20.png"
-cp "$R20TXT" "$DIR/pix_r20.txt"
-cp "$OUT/qr_2.png" "$DIR/pix_r50.png"
-cp "$OUT/pix_copia_cola_2.txt" "$DIR/pix_r50.txt"
-cp "$OUT/qr_0.png" "$DIR/pix_r100.png"
-cp "$OUT/pix_copia_cola_0.txt" "$DIR/pix_r100.txt"
-
-P10=$(tr -d '\n' <"$DIR/pix_r10.txt")
-P20=$(tr -d '\n' <"$DIR/pix_r20.txt")
-P50=$(tr -d '\n' <"$DIR/pix_r50.txt")
-P100=$(tr -d '\n' <"$DIR/pix_r100.txt")
-
-cat > "$DIR/index.html" << EOF
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Assistente Qwen — PT/ZH · código · chat apps</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;padding:0 1rem;line-height:1.45}
-.sku{border:1px solid #ddd;border-radius:12px;padding:1rem;margin:1rem 0}
-.price{font-weight:700;font-size:1.15rem}
-img{width:160px;height:160px}
-code{display:block;font-size:.7rem;word-break:break-all;background:#f5f5f5;padding:.6rem;border-radius:8px;margin-top:.5rem}
-.muted{color:#666;font-size:.9rem}
-.warn{background:#e7f5ff;padding:.75rem;border-radius:8px}
-</style>
-</head>
-<body>
-<h1>Assistente Qwen</h1>
-<p>Copy <strong>PT/ZH</strong>, revisão de código e prompt packs. Stack: chat.qwen.ai free.</p>
-<p class="warn">PIX por valor (EMV 54): R\$10=<code>qr_4</code> · R\$20=<code>pix-r20</code> · R\$50=<code>_2</code> · R\$100=<code>_0</code>/<code>_3</code> · R\$200=<code>_1</code>. Fonte = payload EMV (CRC).</p>
-
-<div class="sku"><div class="price">R\$ 10 — Microcopy</div>
-<img src="pix_r10.png" alt="PIX R$10"/><code>${P10}</code></div>
-<div class="sku"><div class="price">R\$ 20 — Copy curto PT ou ZH</div>
-<img src="pix_r20.png" alt="PIX R$20"/><code>${P20}</code></div>
-<div class="sku"><div class="price">R\$ 50 — Copy + revisão / ZH↔PT</div>
-<img src="pix_r50.png" alt="PIX R$50"/><code>${P50}</code></div>
-<div class="sku"><div class="price">R\$ 100 — Prompt pack / copy maior</div>
-<img src="pix_r100.png" alt="PIX R$100"/><code>${P100}</code></div>
+<img src="pix_r100.png" alt="PIX R$100"/><code>00020126330014br.gov.bcb.pix0111080303629945204000053039865406100.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62090505Apoio6304C160</code></div>
 
 <p class="muted">Recebedor LUIZ · z99003303@gmail.com ·
 Hub <a href="https://ziuluiziul.github.io/round1-cumulunimbus/">Cumulunimbus</a> ·
-Space <a href="https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50">HF PIX R\$50</a> ·
-Brief <a href="https://gist.github.com/Ziuluiziul/0deb075aedb06ade0892e6f848e80f69">Perplexity R\$50</a></p>
-</body>
-</html>
-EOF
-
-# gist assets
-cp "$DIR/pix_r10.png" "$GISTDIR/pix_r10_qr.png"; cp "$DIR/pix_r10.txt" "$GISTDIR/pix_r10_copia_cola.txt"
-cp "$DIR/pix_r20.png" "$GISTDIR/pix_r20_qr.png"; cp "$DIR/pix_r20.txt" "$GISTDIR/pix_r20_copia_cola.txt"
-cp "$DIR/pix_r50.png" "$GISTDIR/pix_r50_qr.png"; cp "$DIR/pix_r50.txt" "$GISTDIR/pix_r50_copia_cola.txt"
-cp "$DIR/pix_r100.png" "$GISTDIR/pix_r100_qr.png"; cp "$DIR/pix_r100.txt" "$GISTDIR/pix_r100_copia_cola.txt"
-
-cat > "$GISTDIR/anuncio-qwen-pt-zh.md" << EOF
-# Assistente Qwen — PT/ZH · código · chat apps
-
-## PIX (mapa corrigido 2026-09-05)
-| Valor | Arquivo |
-|-------|---------|
-| R\$10 | \`qr_4\` / \`pix_copia_cola_4\` |
-| R\$20 | \`pix-r20\` (fora do índice 0..5) |
-| R\$50 | \`_2\` |
-| R\$100 | \`_0\` ou \`_3\` |
-| R\$200 | \`_1\` |
-
-### R\$ 10
-![qr](pix_r10_qr.png)
-\`\`\`
-${P10}
-\`\`\`
-### R\$ 20
-![qr](pix_r20_qr.png)
-\`\`\`
-${P20}
-\`\`\`
-### R\$ 50
-![qr](pix_r50_qr.png)
-\`\`\`
-${P50}
-\`\`\`
-### R\$ 100
-![qr](pix_r100_qr.png)
-\`\`\`
-${P100}
-\`\`\`
-
-Após PIX: z99003303@gmail.com
-Pages: https://ziuluiziul.github.io/qwen-assistente-pix/
-HF: https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50
-EOF
-
-# OFERTA
-cat > /workspace/revenue-missions/qwen/OFERTA.md << 'EOF'
-# OFERTA — Qwen (mapa PIX corrigido)
-
-| SKU | Valor | Fonte EMV |
-|-----|-------|-----------|
-| Microcopy | R$10 | `qr_4` / `pix_copia_cola_4` |
-| Copy curto | R$20 | `pix-r20` |
-| Copy+revisão | R$50 | `_2` |
-| Prompt pack | R$100 | `_0` ou `_3` |
-
-`_1` = R$200 (não R$10). Sem cold-DM.
-Pages: https://ziuluiziul.github.io/qwen-assistente-pix/
-Gist: https://gist.github.com/Ziuluiziul/56b364e3d982216edcf87c9d07084636
-EOF
-
-cd "$DIR"
-git config user.email "z99003303@gmail.com"
-git config user.name "Ziuluiziul"
-git add -A && git commit -m "PIX map fix: R\$10=qr_4 R\$20=pix-r20 R\$50=_2 R\$100=_0 R\$200=_1" && git push
-
-TMP=$(mktemp -d)
-gh gist clone 56b364e3d982216edcf87c9d07084636 "$TMP/g"
-cd "$TMP/g"
-git config user.email "z99003303@gmail.com"
-git config user.name "Ziuluiziul"
-cp "$GISTDIR"/* .
-git add -A && git status
-git commit -m "PIX map fix: R\$10=qr_4 R\$20=pix-r20 R\$50=_2 R\$100=_0" && git push
-echo DONE
-00"/><code>00020126330014br.gov.bcb.pix0111080303629945204000053039865406100.005802BR5920LUIZ GUSTAVO CORREIA6009SAO PAULO62090505Apoio6304C160</code></div>
-
-<p class="muted">Recebedor LUIZ · z99003303@gmail.com ·
-Hub <a href="https://ziuluiziul.github.io/round1-cumulunimbus/">Cumulunimbus</a> ·
-Space <a href="https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50">HF PIX R$50</a> · Nous <a href="https://huggingface.co/spaces/Ziulluizziul/nous-free-smoke-r50">nous-free-smoke-r50</a> · Pack <a href="https://huggingface.co/collections/Ziulluizziul/round1-pix-free-pack">round1-pix-free-pack</a> ·
-Brief <a href="https://gist.github.com/Ziuluiziul/0deb075aedb06ade0892e6f848e80f69">Perplexity R$50</a></p>
+Space <a href="https://huggingface.co/spaces/Ziulluizziul/round1-pix-r50">HF PIX R$50</a> ·
+Pages <a href="https://ziuluiziul.github.io/qwen-assistente-pix/">qwen-assistente-pix</a> ·
+Gist <a href="https://gist.github.com/Ziuluiziul/56b364e3d982216edcf87c9d07084636">PIX Qwen</a></p>
 </body>
 </html>
